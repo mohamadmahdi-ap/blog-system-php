@@ -1,0 +1,154 @@
+.dashboard-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 25px 20px;
+    display: flex;
+    gap: 20px;
+}
+
+
+.d-menu {
+    position: sticky;
+    top: 100px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: var(--box-bg);
+    padding: 20px;
+    border-radius: 1rem;
+    box-shadow: 0 0 15px var(--shadow);
+}
+
+.d-menu a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.d-menu a:hover span,
+.d-menu a:hover i,
+.active-dashboard-link span ,
+.active-dashboard-link i{
+    color: var(--main-color);
+}
+
+
+.dashboard-content {
+    background: var(--box-bg);
+    padding: 20px;
+    border-radius: 1rem;
+    box-shadow: 0 0 15px var(--shadow);
+    width: 100%;
+    min-height: 400px;
+}
+.setting-form  form{
+    margin : 0 auto;
+}
+
+.dashboard-info {
+    min-height: 360px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.user-avatar img,
+.dashboard-info img {
+    max-width: 200px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    box-shadow: 0 0 15px var(--shadow);
+}
+i.liked-btn{
+    color: var(--main-color);
+}
+
+.dashboard-content-box {
+    width: 100%;
+}
+
+.manage-title {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.table-content {
+    overflow-x: scroll;
+
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid var(--text);
+    overflow-x: auto;
+}
+
+td,
+th {
+    color: var(--text);
+    padding: 5px 10px;
+    text-align: center;
+    min-width: 80px;
+}
+
+tr {
+    border-bottom: 1px solid var(--text);
+}
+
+tbody tr:hover {
+    transition: var(--transition);
+    background-color: var(--main-bg);
+}
+
+td img.user-avatar {
+    width: 50px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    clip-path: circle();
+}
+
+td img.category-banner,
+td img.post-banner {
+    width: 120px;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    border-radius: 1rem;
+
+}
+
+.table-ellipsis {
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table-ellipsis span {
+    width: 200px;
+    padding: 5px 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media screen and (max-width:900px) {
+    .d-menu {
+        width: 60px;
+    }
+
+    .d-menu a span {
+        display: none;
+    }
+
+    .dashboard-content-box .posts .post {
+        max-width: 800px;
+    }
+}

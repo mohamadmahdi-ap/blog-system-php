@@ -1,0 +1,157 @@
+.btn {
+    font-family: var(--font);
+    cursor: pointer;
+    border-radius: .5rem;
+    padding: 5px 15px;
+    background: var(--main-color);
+    color: var(--white);
+    font-size: 20px;
+    border: 1px solid var(--main-color);
+}
+
+.btn:hover {
+    background: none;
+    color: var(--main-color);
+}
+
+.form-box {
+
+    min-height: 100vh;
+    padding: 100px 20px;
+
+}
+.create-form{
+    padding: 20px;
+}
+.form {
+    background: var(--box-bg);
+    padding: 20px;
+    border-radius: 1rem;
+    box-shadow: 0 0 15px var(--shadow);
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: relative;
+}
+#return-btn{
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    font-size: 30px;
+}
+
+input {
+    caret-color: var(--main-color);
+    accent-color:var(--main-color) ;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea ,select{
+    color: var(--text);
+    background: var(--field);
+    box-shadow: 0 0 10px var(--shadow);
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    font-family: var(--font);
+    border-radius: .5rem;
+    padding: 25px 20px 10px;
+    outline: none;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+}
+
+label {
+    user-select: none;
+    cursor: pointer;
+}
+
+.input-box label {
+    font-weight: 500;
+    pointer-events: none;
+    position: absolute;
+    right: 20px;
+    top: 18px;
+}
+
+input[type="text"]:focus~label,
+input[type="text"]:valid~label,
+input[type="password"]:focus~label,
+input[type="password"]:valid~label,
+input[type="email"]:focus~label,
+input[type="email"]:valid~label,
+textarea:focus~label,
+textarea:valid~label {
+    padding: 0 5px;
+    font-size: 12px;
+    right: 10px;
+    top: 5px;
+}
+textarea:focus,input:focus{
+    box-shadow: 0 0 10px var(--main-color);
+
+}
+.input-box i {
+    background: var(--field);
+    position: absolute;
+    left: 15px;
+    top: 20px;
+}
+
+        
+.input-box span, .image-input span , .alert-span{
+    float: right;
+    color: #fa4753;
+    padding-right: 10px;
+}
+
+.send-option{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+select{
+    cursor: pointer;
+    padding: 15px;
+}
+select option{
+    cursor: pointer;
+    background: var(--field);
+    color: var(--text);
+}
+
+
+textarea{
+    caret-color: var(--main-color);
+    resize: vertical;
+}
+
+input[type="file"]{
+    display: none;
+}
+.image-input img{
+    width: 100%;
+    border-radius: 1rem;
+    aspect-ratio: 9/6;
+    object-fit: cover;
+    border: 1px dotted var(--title);
+}
+
+
+.setting-form{
+    padding: 0 !important;
+    width: 100%;
+    height: 500px;
+}
+.setting-form form{
+    max-width: 770px;
+}
